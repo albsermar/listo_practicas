@@ -18,7 +18,7 @@ services:
       MARIADB_USER: ${MARIADB_USER:-listo_user}
       MARIADB_PASSWORD: ${MARIADB_PASSWORD:-listo_password}
     ports:
-      - "127.0.0.1:${MARIADB_PORT:-3306}:3306" # solo accesible desde esta máquina
+      - "127.0.0.1:${MARIADB_PORT:-3307}:3306" # solo accesible desde esta máquina
     volumes:
       - mariadb_data:/var/lib/mysql
     healthcheck:

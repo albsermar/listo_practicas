@@ -20,6 +20,7 @@ from app.extensions import csrf, db, login_manager
 from app.features.auth import auth_bp
 from app.features.home import home_bp
 from app.features.tasks import tasks_api_bp, tasks_bp
+from app.features.notas.routes import notas_bp
 
 
 def create_app(config_overrides=None):
@@ -27,6 +28,7 @@ def create_app(config_overrides=None):
     (por ejemplo, los tests la usan para trabajar con SQLite en memoria)."""
     app = Flask(__name__)
     app.config.from_object(Config)
+    app.register_blueprint(notas_bp)
     app.config.from_prefixed_env()  # cualquier variable de entorno FLASK_* también configura la app
     if config_overrides:
         app.config.update(config_overrides)
