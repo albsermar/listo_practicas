@@ -19,8 +19,8 @@ from app.config import Config
 from app.extensions import csrf, db, login_manager
 from app.features.auth import auth_bp
 from app.features.home import home_bp
-from app.features.tasks import tasks_api_bp, tasks_bp
 from app.features.notas.routes import notas_bp
+from app.features.tasks import tasks_api_bp, tasks_bp
 
 
 def create_app(config_overrides=None):
